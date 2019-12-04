@@ -1,27 +1,28 @@
 //
-//  LXDiscoverViewController.m
+//  LXMineViewController.m
 //  WeiboDemo
 //
-//  Created by Werner on 2019/12/4.
+//  Created by Luo Xin on 2019/12/4.
 //  Copyright © 2019 Werner. All rights reserved.
 //
 
-#import "LXDiscoverViewController.h"
-#import "LXSearchBar.h"
+#import "LXMineViewController.h"
 
-@interface LXDiscoverViewController ()
+@interface LXMineViewController ()
 
 @end
 
-@implementation LXDiscoverViewController
+@implementation LXMineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LXSearchBar *searchBar = [[LXSearchBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 40)];
-    searchBar.placeholder = @"search you want...";
+    UIBarButtonItem *setting = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(setting)];
+    self.navigationItem.rightBarButtonItem = setting;
+}
+
+- (void)setting{
     
-    self.navigationItem.titleView = searchBar;
 }
 
 #pragma mark - Table view data source

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		361AA2F1235F05670065CC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361AA2F0235F05670065CC8B /* Assets.xcassets */; };
 		361AA2F4235F05670065CC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361AA2F2235F05670065CC8B /* LaunchScreen.storyboard */; };
+		365BD20D2397F0CF00A9EE27 /* LXMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365BD20C2397F0CF00A9EE27 /* LXMessageViewController.m */; };
+		365BD2102397F2CE00A9EE27 /* LXMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365BD20F2397F2CE00A9EE27 /* LXMineViewController.m */; };
 		368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC023979B2700B4DB27 /* LXSearchBar.m */; };
 		368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */; };
 		368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */; };
@@ -31,6 +33,10 @@
 		361AA2F0235F05670065CC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		361AA2F3235F05670065CC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		361AA2F5235F05670065CC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		365BD20B2397F0CF00A9EE27 /* LXMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXMessageViewController.h; sourceTree = "<group>"; };
+		365BD20C2397F0CF00A9EE27 /* LXMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXMessageViewController.m; sourceTree = "<group>"; };
+		365BD20E2397F2CE00A9EE27 /* LXMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXMineViewController.h; sourceTree = "<group>"; };
+		365BD20F2397F2CE00A9EE27 /* LXMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXMineViewController.m; sourceTree = "<group>"; };
 		368EEABF23979B2700B4DB27 /* LXSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSearchBar.h; sourceTree = "<group>"; };
 		368EEAC023979B2700B4DB27 /* LXSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSearchBar.m; sourceTree = "<group>"; };
 		368EEAC52397A0AA00B4DB27 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -93,10 +99,10 @@
 		361AA2E3235F05600065CC8B /* WeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
-				36918BF323978E58002A9994 /* Classes */,
 				361AA2F0235F05670065CC8B /* Assets.xcassets */,
-				361AA2F2235F05670065CC8B /* LaunchScreen.storyboard */,
+				36918BF323978E58002A9994 /* Classes */,
 				361AA2F5235F05670065CC8B /* Info.plist */,
+				361AA2F2235F05670065CC8B /* LaunchScreen.storyboard */,
 			);
 			path = WeiboDemo;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 		36918C0423978E58002A9994 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				365BD20B2397F0CF00A9EE27 /* LXMessageViewController.h */,
+				365BD20C2397F0CF00A9EE27 /* LXMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,6 +267,8 @@
 		36918C0823978E58002A9994 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				365BD20E2397F2CE00A9EE27 /* LXMineViewController.h */,
+				365BD20F2397F2CE00A9EE27 /* LXMineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -388,6 +398,7 @@
 				368EEAD92397B29F00B4DB27 /* LXCover.m in Sources */,
 				368EEAD62397A8F700B4DB27 /* UIBarButtonItem+Item.m in Sources */,
 				368EEACD2397A45A00B4DB27 /* LXNavigationController.m in Sources */,
+				365BD2102397F2CE00A9EE27 /* LXMineViewController.m in Sources */,
 				368EEADD2397B84800B4DB27 /* LXPopMenu.m in Sources */,
 				368EEAE02397BB1600B4DB27 /* LXOneViewController.m in Sources */,
 				368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */,
@@ -396,6 +407,7 @@
 				36918C1523978E58002A9994 /* AppDelegate.m in Sources */,
 				36918C1623978E58002A9994 /* LXTabBarController.m in Sources */,
 				36918C1723978E58002A9994 /* LXTabBar.m in Sources */,
+				365BD20D2397F0CF00A9EE27 /* LXMessageViewController.m in Sources */,
 				368EEAD32397A7DB00B4DB27 /* LXTitleButton.m in Sources */,
 				368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */,
 				368EEAD02397A74800B4DB27 /* LXHomeViewController.m in Sources */,

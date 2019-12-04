@@ -16,7 +16,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.font = [UIFont systemFontOfSize:13];
+        self.font = [UIFont systemFontOfSize:14];
         self.background = [UIImage imageWithStretchableName:@"searchbar_textfield_background"];
         
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"searchbar_textfield_search_icon"]];
@@ -26,6 +26,24 @@
         self.leftViewMode = UITextFieldViewModeAlways;
     }
     return self;
+}
+
+- (CGRect)textRectForBounds:(CGRect)bounds{
+    CGRect rect = [super textRectForBounds:bounds];
+    rect.origin.x += 10;
+    return rect;
+}
+
+- (CGRect)editingRectForBounds:(CGRect)bounds{
+    CGRect rect = [super editingRectForBounds:bounds];
+    rect.origin.x += 10;
+    return rect;
+}
+
+- (CGRect)leftViewRectForBounds:(CGRect)bounds{
+    CGRect iconRect = [super leftViewRectForBounds:bounds];
+    iconRect.origin.x += 10;
+    return iconRect;
 }
 
 @end

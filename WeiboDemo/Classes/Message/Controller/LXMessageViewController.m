@@ -1,27 +1,29 @@
 //
-//  LXDiscoverViewController.m
+//  LXMessageViewController.m
 //  WeiboDemo
 //
-//  Created by Werner on 2019/12/4.
+//  Created by Luo Xin on 2019/12/4.
 //  Copyright © 2019 Werner. All rights reserved.
 //
 
-#import "LXDiscoverViewController.h"
-#import "LXSearchBar.h"
+#import "LXMessageViewController.h"
 
-@interface LXDiscoverViewController ()
+@interface LXMessageViewController ()
 
 @end
 
-@implementation LXDiscoverViewController
+@implementation LXMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LXSearchBar *searchBar = [[LXSearchBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 40)];
-    searchBar.placeholder = @"search you want...";
+    UIBarButtonItem *chat = [[UIBarButtonItem alloc] initWithTitle:@"发起聊天" style:UIBarButtonItemStylePlain target:self action:@selector(chat)];
+    self.navigationItem.rightBarButtonItem = chat;
+    self.navigationItem.title = @"消息";
+}
+
+- (void)chat{
     
-    self.navigationItem.titleView = searchBar;
 }
 
 #pragma mark - Table view data source

@@ -55,6 +55,9 @@
 
 - (void)searchFriend{
     
+    UIViewController *con = [[UIViewController alloc] init];
+//    con.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController: con animated:YES];
 }
 
 - (void)pop{

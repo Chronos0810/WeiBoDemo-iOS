@@ -12,6 +12,8 @@
 #import "LXNavigationController.h"
 #import "LXDiscoverViewController.h"
 #import "LXHomeViewController.h"
+#import "LXMessageViewController.h"
+#import "LXMineViewController.h"
 
 //#import <objc/message.h>
 
@@ -38,7 +40,9 @@
     
     [self setUpAllChildViewController];
     
-    LXTabBar *tabBar = [[LXTabBar alloc] initWithFrame:self.tabBar.frame];
+    LXTabBar *tabBar = [[LXTabBar alloc] initWithFrame:self.tabBar.bounds];
+    tabBar.backgroundColor = [UIColor whiteColor];
+
     [self setValue:tabBar forKeyPath:@"tabBar"];
     
     //消息机制
@@ -51,15 +55,13 @@
     LXHomeViewController *homeVC = [[LXHomeViewController alloc] init];
     [self initOneChildViewController:homeVC image:[UIImage imageWithOriginalName:@"tabbar_home"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_home_selected"] title:@"首页"];
     
-    UIViewController *messageVC = [[UIViewController alloc] init];
-    messageVC.view.backgroundColor = [UIColor yellowColor];
+    LXMessageViewController *messageVC = [[LXMessageViewController alloc] init];
     [self initOneChildViewController:messageVC image:[UIImage imageWithOriginalName:@"tabbar_message_center"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_message_center_selected"] title:@"消息"];
     
     LXDiscoverViewController *discoverVC = [[LXDiscoverViewController alloc] init];
     [self initOneChildViewController:discoverVC image:[UIImage imageWithOriginalName:@"tabbar_discover"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_discover_selected"] title:@"发现"];
     
-    UIViewController *mineVC = [[UIViewController alloc] init];
-    mineVC.view.backgroundColor = [UIColor whiteColor];
+    LXMineViewController *mineVC = [[LXMineViewController alloc] init];
     [self initOneChildViewController:mineVC image:[UIImage imageWithOriginalName:@"tabbar_profile"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_profile_selected"] title:@"我"];
     
 }
