@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		361AA2F1235F05670065CC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361AA2F0235F05670065CC8B /* Assets.xcassets */; };
 		361AA2F4235F05670065CC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361AA2F2235F05670065CC8B /* LaunchScreen.storyboard */; };
+		368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC023979B2700B4DB27 /* LXSearchBar.m */; };
+		368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */; };
+		368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */; };
+		368EEACD2397A45A00B4DB27 /* LXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEACC2397A45A00B4DB27 /* LXNavigationController.m */; };
+		368EEAD02397A74800B4DB27 /* LXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEACF2397A74700B4DB27 /* LXHomeViewController.m */; };
+		368EEAD32397A7DB00B4DB27 /* LXTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAD22397A7DB00B4DB27 /* LXTitleButton.m */; };
+		368EEAD62397A8F700B4DB27 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAD52397A8F700B4DB27 /* UIBarButtonItem+Item.m */; };
+		368EEAD92397B29F00B4DB27 /* LXCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAD82397B29F00B4DB27 /* LXCover.m */; };
+		368EEADD2397B84800B4DB27 /* LXPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEADC2397B84800B4DB27 /* LXPopMenu.m */; };
+		368EEAE02397BB1600B4DB27 /* LXOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEADF2397BB1600B4DB27 /* LXOneViewController.m */; };
 		36918C1323978E58002A9994 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918BFF23978E58002A9994 /* UIImage+Image.m */; };
 		36918C1423978E58002A9994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C0123978E58002A9994 /* main.m */; };
 		36918C1523978E58002A9994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C0223978E58002A9994 /* AppDelegate.m */; };
@@ -21,6 +31,27 @@
 		361AA2F0235F05670065CC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		361AA2F3235F05670065CC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		361AA2F5235F05670065CC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368EEABF23979B2700B4DB27 /* LXSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSearchBar.h; sourceTree = "<group>"; };
+		368EEAC023979B2700B4DB27 /* LXSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSearchBar.m; sourceTree = "<group>"; };
+		368EEAC52397A0AA00B4DB27 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		368EEAC82397A22E00B4DB27 /* LXDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXDiscoverViewController.h; sourceTree = "<group>"; };
+		368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXDiscoverViewController.m; sourceTree = "<group>"; };
+		368EEACB2397A45A00B4DB27 /* LXNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXNavigationController.h; sourceTree = "<group>"; };
+		368EEACC2397A45A00B4DB27 /* LXNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXNavigationController.m; sourceTree = "<group>"; };
+		368EEACE2397A74700B4DB27 /* LXHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXHomeViewController.h; sourceTree = "<group>"; };
+		368EEACF2397A74700B4DB27 /* LXHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXHomeViewController.m; sourceTree = "<group>"; };
+		368EEAD12397A7DB00B4DB27 /* LXTitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXTitleButton.h; sourceTree = "<group>"; };
+		368EEAD22397A7DB00B4DB27 /* LXTitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXTitleButton.m; sourceTree = "<group>"; };
+		368EEAD42397A8F700B4DB27 /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		368EEAD52397A8F700B4DB27 /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
+		368EEAD72397B29F00B4DB27 /* LXCover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCover.h; sourceTree = "<group>"; };
+		368EEAD82397B29F00B4DB27 /* LXCover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCover.m; sourceTree = "<group>"; };
+		368EEADA2397B3D700B4DB27 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		368EEADB2397B84800B4DB27 /* LXPopMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPopMenu.h; sourceTree = "<group>"; };
+		368EEADC2397B84800B4DB27 /* LXPopMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPopMenu.m; sourceTree = "<group>"; };
+		368EEADE2397BB1600B4DB27 /* LXOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXOneViewController.h; sourceTree = "<group>"; };
+		368EEADF2397BB1600B4DB27 /* LXOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXOneViewController.m; sourceTree = "<group>"; };
 		36918BFD23978E58002A9994 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36918BFF23978E58002A9994 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		36918C0023978E58002A9994 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
@@ -96,6 +127,10 @@
 		36918BF523978E58002A9994 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				368EEACE2397A74700B4DB27 /* LXHomeViewController.h */,
+				368EEACF2397A74700B4DB27 /* LXHomeViewController.m */,
+				368EEADE2397BB1600B4DB27 /* LXOneViewController.h */,
+				368EEADF2397BB1600B4DB27 /* LXOneViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +145,12 @@
 		36918BF723978E58002A9994 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				368EEAD12397A7DB00B4DB27 /* LXTitleButton.h */,
+				368EEAD22397A7DB00B4DB27 /* LXTitleButton.m */,
+				368EEAD72397B29F00B4DB27 /* LXCover.h */,
+				368EEAD82397B29F00B4DB27 /* LXCover.m */,
+				368EEADB2397B84800B4DB27 /* LXPopMenu.h */,
+				368EEADC2397B84800B4DB27 /* LXPopMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +168,8 @@
 		36918BF923978E58002A9994 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				368EEAC82397A22E00B4DB27 /* LXDiscoverViewController.h */,
+				368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +184,8 @@
 		36918BFB23978E58002A9994 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				368EEABF23979B2700B4DB27 /* LXSearchBar.h */,
+				368EEAC023979B2700B4DB27 /* LXSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,10 +193,11 @@
 		36918BFC23978E58002A9994 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				36918BFD23978E58002A9994 /* AppDelegate.h */,
 				36918BFE23978E58002A9994 /* Category */,
+				36918BFD23978E58002A9994 /* AppDelegate.h */,
 				36918C0123978E58002A9994 /* main.m */,
 				36918C0223978E58002A9994 /* AppDelegate.m */,
+				368EEADA2397B3D700B4DB27 /* PrefixHeader.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -161,6 +207,10 @@
 			children = (
 				36918BFF23978E58002A9994 /* UIImage+Image.m */,
 				36918C0023978E58002A9994 /* UIImage+Image.h */,
+				368EEAC52397A0AA00B4DB27 /* UIView+Frame.h */,
+				368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */,
+				368EEAD42397A8F700B4DB27 /* UIBarButtonItem+Item.h */,
+				368EEAD52397A8F700B4DB27 /* UIBarButtonItem+Item.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -242,6 +292,8 @@
 			children = (
 				36918C0D23978E58002A9994 /* LXTabBarController.h */,
 				36918C0E23978E58002A9994 /* LXTabBarController.m */,
+				368EEACB2397A45A00B4DB27 /* LXNavigationController.h */,
+				368EEACC2397A45A00B4DB27 /* LXNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,10 +385,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				36918C1423978E58002A9994 /* main.m in Sources */,
+				368EEAD92397B29F00B4DB27 /* LXCover.m in Sources */,
+				368EEAD62397A8F700B4DB27 /* UIBarButtonItem+Item.m in Sources */,
+				368EEACD2397A45A00B4DB27 /* LXNavigationController.m in Sources */,
+				368EEADD2397B84800B4DB27 /* LXPopMenu.m in Sources */,
+				368EEAE02397BB1600B4DB27 /* LXOneViewController.m in Sources */,
+				368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */,
 				36918C1323978E58002A9994 /* UIImage+Image.m in Sources */,
+				368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */,
 				36918C1523978E58002A9994 /* AppDelegate.m in Sources */,
 				36918C1623978E58002A9994 /* LXTabBarController.m in Sources */,
 				36918C1723978E58002A9994 /* LXTabBar.m in Sources */,
+				368EEAD32397A7DB00B4DB27 /* LXTitleButton.m in Sources */,
+				368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */,
+				368EEAD02397A74800B4DB27 /* LXHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +532,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD4XJJ42Y;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WeiboDemo/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = WeiboDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,6 +552,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD4XJJ42Y;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WeiboDemo/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = WeiboDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

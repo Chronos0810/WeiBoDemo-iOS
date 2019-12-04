@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)imageWithOriginalName:(NSString *)imageName;
 
++ (instancetype)imageWithStretchableName:(NSString *)imageName;
+
 @end
 
 NS_ASSUME_NONNULL_END
