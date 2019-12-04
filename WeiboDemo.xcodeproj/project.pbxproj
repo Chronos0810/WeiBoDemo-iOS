@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		361AA2E6235F05600065CC8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 361AA2E5235F05600065CC8B /* AppDelegate.m */; };
-		361AA2E9235F05600065CC8B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 361AA2E8235F05600065CC8B /* SceneDelegate.m */; };
 		361AA2F1235F05670065CC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361AA2F0235F05670065CC8B /* Assets.xcassets */; };
 		361AA2F4235F05670065CC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361AA2F2235F05670065CC8B /* LaunchScreen.storyboard */; };
-		361AA2F7235F05670065CC8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 361AA2F6235F05670065CC8B /* main.m */; };
-		361AA313236051F40065CC8B /* LXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361AA312236051F40065CC8B /* LXTabBarController.m */; };
-		36918BCA23965DC4002A9994 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918BC923965DC3002A9994 /* UIImage+Image.m */; };
+		36918C1323978E58002A9994 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918BFF23978E58002A9994 /* UIImage+Image.m */; };
+		36918C1423978E58002A9994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C0123978E58002A9994 /* main.m */; };
+		36918C1523978E58002A9994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C0223978E58002A9994 /* AppDelegate.m */; };
+		36918C1623978E58002A9994 /* LXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C0E23978E58002A9994 /* LXTabBarController.m */; };
+		36918C1723978E58002A9994 /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C1223978E58002A9994 /* LXTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		361AA2E1235F05600065CC8B /* WeiboDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiboDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		361AA2E4235F05600065CC8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		361AA2E5235F05600065CC8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		361AA2E7235F05600065CC8B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		361AA2E8235F05600065CC8B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		361AA2F0235F05670065CC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		361AA2F3235F05670065CC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		361AA2F5235F05670065CC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		361AA2F6235F05670065CC8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		361AA311236051F40065CC8B /* LXTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXTabBarController.h; sourceTree = "<group>"; };
-		361AA312236051F40065CC8B /* LXTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXTabBarController.m; sourceTree = "<group>"; };
-		36918BC823965DC3002A9994 /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
-		36918BC923965DC3002A9994 /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		36918BFD23978E58002A9994 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36918BFF23978E58002A9994 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		36918C0023978E58002A9994 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		36918C0123978E58002A9994 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36918C0223978E58002A9994 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36918C0D23978E58002A9994 /* LXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBarController.h; sourceTree = "<group>"; };
+		36918C0E23978E58002A9994 /* LXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarController.m; sourceTree = "<group>"; };
+		36918C1123978E58002A9994 /* LXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBar.h; sourceTree = "<group>"; };
+		36918C1223978E58002A9994 /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,20 +62,204 @@
 		361AA2E3235F05600065CC8B /* WeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
-				361AA2E4235F05600065CC8B /* AppDelegate.h */,
-				361AA2E5235F05600065CC8B /* AppDelegate.m */,
-				361AA2E7235F05600065CC8B /* SceneDelegate.h */,
-				361AA2E8235F05600065CC8B /* SceneDelegate.m */,
+				36918BF323978E58002A9994 /* Classes */,
 				361AA2F0235F05670065CC8B /* Assets.xcassets */,
 				361AA2F2235F05670065CC8B /* LaunchScreen.storyboard */,
 				361AA2F5235F05670065CC8B /* Info.plist */,
-				361AA2F6235F05670065CC8B /* main.m */,
-				361AA311236051F40065CC8B /* LXTabBarController.h */,
-				361AA312236051F40065CC8B /* LXTabBarController.m */,
-				36918BC823965DC3002A9994 /* UIImage+Image.h */,
-				36918BC923965DC3002A9994 /* UIImage+Image.m */,
 			);
 			path = WeiboDemo;
+			sourceTree = "<group>";
+		};
+		36918BF323978E58002A9994 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				36918BF423978E58002A9994 /* Home */,
+				36918BF823978E58002A9994 /* Discover */,
+				36918BFC23978E58002A9994 /* Other */,
+				36918C0323978E58002A9994 /* Message */,
+				36918C0723978E58002A9994 /* Mine */,
+				36918C0B23978E58002A9994 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		36918BF423978E58002A9994 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				36918BF523978E58002A9994 /* Controller */,
+				36918BF623978E58002A9994 /* Model */,
+				36918BF723978E58002A9994 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		36918BF523978E58002A9994 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36918BF623978E58002A9994 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36918BF723978E58002A9994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36918BF823978E58002A9994 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				36918BF923978E58002A9994 /* Controller */,
+				36918BFA23978E58002A9994 /* Model */,
+				36918BFB23978E58002A9994 /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		36918BF923978E58002A9994 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36918BFA23978E58002A9994 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36918BFB23978E58002A9994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36918BFC23978E58002A9994 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				36918BFD23978E58002A9994 /* AppDelegate.h */,
+				36918BFE23978E58002A9994 /* Category */,
+				36918C0123978E58002A9994 /* main.m */,
+				36918C0223978E58002A9994 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		36918BFE23978E58002A9994 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				36918BFF23978E58002A9994 /* UIImage+Image.m */,
+				36918C0023978E58002A9994 /* UIImage+Image.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		36918C0323978E58002A9994 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				36918C0423978E58002A9994 /* Controller */,
+				36918C0523978E58002A9994 /* Model */,
+				36918C0623978E58002A9994 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		36918C0423978E58002A9994 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36918C0523978E58002A9994 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36918C0623978E58002A9994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36918C0723978E58002A9994 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				36918C0823978E58002A9994 /* Controller */,
+				36918C0923978E58002A9994 /* Model */,
+				36918C0A23978E58002A9994 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		36918C0823978E58002A9994 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36918C0923978E58002A9994 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36918C0A23978E58002A9994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36918C0B23978E58002A9994 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				36918C0C23978E58002A9994 /* Controller */,
+				36918C0F23978E58002A9994 /* Model */,
+				36918C1023978E58002A9994 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		36918C0C23978E58002A9994 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36918C0D23978E58002A9994 /* LXTabBarController.h */,
+				36918C0E23978E58002A9994 /* LXTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36918C0F23978E58002A9994 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36918C1023978E58002A9994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36918C1123978E58002A9994 /* LXTabBar.h */,
+				36918C1223978E58002A9994 /* LXTabBar.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				361AA2E6235F05600065CC8B /* AppDelegate.m in Sources */,
-				36918BCA23965DC4002A9994 /* UIImage+Image.m in Sources */,
-				361AA2F7235F05670065CC8B /* main.m in Sources */,
-				361AA2E9235F05600065CC8B /* SceneDelegate.m in Sources */,
-				361AA313236051F40065CC8B /* LXTabBarController.m in Sources */,
+				36918C1423978E58002A9994 /* main.m in Sources */,
+				36918C1323978E58002A9994 /* UIImage+Image.m in Sources */,
+				36918C1523978E58002A9994 /* AppDelegate.m in Sources */,
+				36918C1623978E58002A9994 /* LXTabBarController.m in Sources */,
+				36918C1723978E58002A9994 /* LXTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
