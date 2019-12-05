@@ -11,6 +11,8 @@
 
 @interface LXNewFeatureController ()
 
+@property (nonatomic, weak) UIPageControl *mPageControl;
+
 @end
 
 @implementation LXNewFeatureController
@@ -36,6 +38,25 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.bounces = NO;
     
+    [self setUpPageControl];
+    
+}
+
+- (void)setUpPageControl{
+    UIPageControl *pageControl = [[UIPageControl alloc] init];
+    
+    pageControl.numberOfPages = 4;
+    pageControl.pageIndicatorTintColor = [UIColor blackColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+    pageControl.center = CGPointMake(self.view.width * 0.5, self.view.height-50);
+    
+    _mPageControl = pageControl;
+    [self.view addSubview: pageControl];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    int page = scrollView.contentOffset.x / scrollView.bounds.size.width + 0.5;
+    _mPageControl.currentPage = page;
 }
 
 
@@ -55,6 +76,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSString *imageName = [NSString stringWithFormat:@"new_feature_%ld", indexPath.row+1];
     cell.image = [UIImage imageNamed:imageName];
+    
+    [cell setIndexPath:indexPath count:4];
     
     return cell;
 }

@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "LXTabBarController.h"
 #import "LXNewFeatureController.h"
+#import "CustomTabBarController.h"
+
+#define VersionKey @"version"
 
 @interface AppDelegate ()
 
@@ -24,11 +27,20 @@
         
     self.mWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    LXNewFeatureController *newFeatureVC = [[LXNewFeatureController alloc] init];
-    self.mWindow.rootViewController = newFeatureVC;
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
     
-//    LXTabBarController *tabBarVC = [[LXTabBarController alloc] init];
-//    self.mWindow.rootViewController = tabBarVC;
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:VersionKey];
+    
+    if (![currentVersion isEqualToString:lastVersion]) {
+        LXTabBarController *tabBarVC = [[LXTabBarController alloc] init];
+        self.mWindow.rootViewController = tabBarVC;
+    } else{
+        LXNewFeatureController *newFeatureVC = [[LXNewFeatureController alloc] init];
+        self.mWindow.rootViewController = newFeatureVC;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:VersionKey];
+    }
+    
     [self.mWindow makeKeyAndVisible];
     
     return YES;

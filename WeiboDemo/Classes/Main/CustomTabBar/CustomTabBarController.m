@@ -1,38 +1,34 @@
 //
-//  LXTabBarController.m
+//  CustomTabBarController.m
 //  WeiboDemo
 //
-//  Created by Werner on 2019/10/23.
+//  Created by Luo Xin on 2019/12/5.
 //  Copyright © 2019 Werner. All rights reserved.
 //
 
-#import "LXTabBarController.h"
-#import "UIImage+Image.h"
-#import "LXTabBar.h"
+#import "CustomTabBarController.h"
+#import "CustomTabBar.h"
 #import "LXNavigationController.h"
 #import "LXDiscoverViewController.h"
 #import "LXHomeViewController.h"
 #import "LXMessageViewController.h"
 #import "LXMineViewController.h"
 
-//#import <objc/message.h>
+@interface CustomTabBarController ()<CustomTabBarDelegate>
 
-@interface LXTabBarController ()
+@property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
-@implementation LXTabBarController
+@implementation CustomTabBarController
 
-+ (void)initialize
-{
-    if (self == [LXTabBarController class]) {
+- (NSMutableArray *)items{
+    if (_items == nil) {
         
-//        UITabBarItem *item = [UITabBarItem appearance];
-        UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
-        NSMutableDictionary *attr = [NSMutableDictionary dictionary];
-        attr[NSForegroundColorAttributeName] = [UIColor orangeColor];
-        [item setTitleTextAttributes:attr forState:UIControlStateSelected];
+        _items = [NSMutableArray array];
+        
     }
+    return _items;
 }
 
 - (void)viewDidLoad {
@@ -40,14 +36,22 @@
     
     [self setUpAllChildViewController];
     
-    LXTabBar *tabBar = [[LXTabBar alloc] initWithFrame:self.tabBar.bounds];
-    tabBar.backgroundColor = [UIColor whiteColor];
+    [self setTabBar];
+    
+}
 
-    [self setValue:tabBar forKeyPath:@"tabBar"];
+- (void)setTabBar{
     
-    //消息机制
-//    objc_msgSend(self, @selector(setTabBar:), tabBar);
+    CustomTabBar *tabBar = [[CustomTabBar alloc] initWithFrame:self.tabBar.bounds];
+    tabBar.backgroundColor = [UIColor whiteColor];
     
+    tabBar.delegate = self;
+    tabBar.items = self.items;
+    [self.tabBar addSubview:tabBar];
+}
+
+- (void)tabBar:(CustomTabBar *)tabBar didClickButton:(NSInteger)index{
+    self.selectedIndex = index;
 }
 
 - (void)setUpAllChildViewController{
@@ -70,7 +74,9 @@
     controller.tabBarItem.title = title;
     controller.tabBarItem.image = image;
     controller.tabBarItem.selectedImage = selectedImage;
-//    controller.tabBarItem.badgeValue = @"10";
+    controller.tabBarItem.badgeValue = @"1000";
+    
+    [self.items addObject:controller.tabBarItem];
     
     LXNavigationController *navController = [[LXNavigationController alloc] initWithRootViewController:controller];
 
