@@ -55,13 +55,12 @@
 
 - (void)searchFriend{
     
-    UIViewController *con = [[UIViewController alloc] init];
-//    con.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController: con animated:YES];
+    self.one.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController: self.one animated:YES];
 }
 
 - (void)pop{
-    [self.titleButton setImage:nil forState:UIControlStateNormal];
+    
     
 }
 

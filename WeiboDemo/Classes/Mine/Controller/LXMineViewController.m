@@ -19,6 +19,8 @@
     
     UIBarButtonItem *setting = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(setting)];
     self.navigationItem.rightBarButtonItem = setting;
+    
+    self.navigationItem.title = @"我";
 }
 
 - (void)setting{

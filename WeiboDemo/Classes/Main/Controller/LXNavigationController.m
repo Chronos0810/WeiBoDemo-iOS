@@ -7,8 +7,11 @@
 //
 
 #import "LXNavigationController.h"
+#import "UIBarButtonItem+Item.h"
 
-@interface LXNavigationController ()
+@interface LXNavigationController ()<UINavigationControllerDelegate>
+
+@property(nullable,nonatomic,weak) id <UIGestureRecognizerDelegate> popDelegate;
 
 @end
 
@@ -27,17 +30,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.popDelegate = self.interactivePopGestureRecognizer.delegate;
+    self.delegate = self;
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//导航控制器 即将显示新控制器
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
 }
-*/
+
+//导航控制器 显示新控制器后
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (viewController == self.viewControllers[0]) {
+        self.interactivePopGestureRecognizer.delegate = _popDelegate;
+    } else{
+        self.interactivePopGestureRecognizer.delegate = nil;
+    }
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+    if (self.viewControllers.count != 0) {
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_back"] highImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    }
+    [super pushViewController:viewController animated:animated];
+    
+}
+
+- (void)back{
+    [self popViewControllerAnimated:YES];
+}
+
+
 
 @end
