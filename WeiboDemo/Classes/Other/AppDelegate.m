@@ -7,11 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "LXTabBarController.h"
-#import "LXNewFeatureController.h"
-#import "CustomTabBarController.h"
-
-#define VersionKey @"version"
+#import "LXOAuthViewController.h"
+#import "AccountUtil.h"
+#import "GlobalUtil.h"
 
 @interface AppDelegate ()
 
@@ -27,18 +25,11 @@
         
     self.mWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
-    
-    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:VersionKey];
-    
-    if (![currentVersion isEqualToString:lastVersion]) {
-        LXTabBarController *tabBarVC = [[LXTabBarController alloc] init];
-        self.mWindow.rootViewController = tabBarVC;
-    } else{
-        LXNewFeatureController *newFeatureVC = [[LXNewFeatureController alloc] init];
-        self.mWindow.rootViewController = newFeatureVC;
-        
-        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:VersionKey];
+    if ([AccountUtil account]) {
+        self.mWindow.rootViewController = [GlobalUtil chooseRootViewController];;
+    } else {
+        LXOAuthViewController *oauthVC = [[LXOAuthViewController alloc] init];
+        self.mWindow.rootViewController = oauthVC;
     }
     
     [self.mWindow makeKeyAndVisible];

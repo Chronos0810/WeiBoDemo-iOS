@@ -12,11 +12,19 @@
 #import "LXCover.h"
 #import "LXPopMenu.h"
 #import "LXOneViewController.h"
+#import "AFNetworking.h"
+#import "AccountUtil.h"
+#import "LXAccount.h"
+#import "MJExtension.h"
+#import "LXStatus.h"
+#import "LXUser.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface LXHomeViewController ()<LXCoverDelegate>
 
 @property (nonatomic, strong) LXOneViewController *one;
 @property (nonatomic, weak) LXTitleButton *titleButton;
+@property (nonatomic, strong) NSMutableArray *statusList;
 
 @end
 
@@ -30,10 +38,20 @@
     return _one;
 }
 
+- (NSMutableArray *)statusList{
+    if (_statusList == nil) {
+        _statusList = [NSMutableArray array];
+    }
+    
+    return _statusList;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setUpNavigationBar];
+    
+    [self getLatestNews];
 }
 
 - (void)setUpNavigationBar{
@@ -85,27 +103,47 @@
     self.titleButton.selected = NO;
 }
 
+#pragma mark - get latest news
+- (void)getLatestNews{
+    LXAccount *account = [AccountUtil account];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+                                   
+    [[AFHTTPSessionManager manager] GET:[NSString stringWithFormat:@"%@%@",BASE_URL,@"/2/statuses/home_timeline.json"] parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSArray *responseArr = responseObject[@"statuses"];
+        self.statusList = [LXStatus mj_objectArrayWithKeyValuesArray:responseArr];
+        
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        GlobalLog(@"%@", error);
+    }];
+}
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.statusList.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *ID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
     
-    // Configure the cell...
+    LXStatus *status = self.statusList[indexPath.row];\
+    cell.textLabel.text = status.user.name;
+    cell.detailTextLabel.text = status.text;
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:status.user.profile_image_url] placeholderImage:nil];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -138,16 +176,6 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 */
 
