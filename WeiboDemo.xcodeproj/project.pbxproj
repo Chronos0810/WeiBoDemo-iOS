@@ -43,6 +43,10 @@
 		36918C1523978E58002A9994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C0223978E58002A9994 /* AppDelegate.m */; };
 		36918C1623978E58002A9994 /* LXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C0E23978E58002A9994 /* LXTabBarController.m */; };
 		36918C1723978E58002A9994 /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36918C1223978E58002A9994 /* LXTabBar.m */; };
+		36A92C30239E7DD9001017A3 /* LXStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A92C2F239E7DD9001017A3 /* LXStatusCell.m */; };
+		36A92C33239E7EFA001017A3 /* LXOriginalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A92C32239E7EFA001017A3 /* LXOriginalView.m */; };
+		36A92C36239E7F18001017A3 /* LXRetweetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A92C35239E7F18001017A3 /* LXRetweetView.m */; };
+		36A92C39239E7F2D001017A3 /* LXStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A92C38239E7F2D001017A3 /* LXStatusToolBar.m */; };
 		36EC1382239B452D00BD25C9 /* LXOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC1381239B452D00BD25C9 /* LXOAuthViewController.m */; };
 		36EC1384239B4ECE00BD25C9 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 36EC1383239B4ECE00BD25C9 /* podfile */; };
 		36EC1387239B7C1100BD25C9 /* MBProgressHUD+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC1386239B7C1100BD25C9 /* MBProgressHUD+Ext.m */; };
@@ -125,6 +129,14 @@
 		36918C0E23978E58002A9994 /* LXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarController.m; sourceTree = "<group>"; };
 		36918C1123978E58002A9994 /* LXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBar.h; sourceTree = "<group>"; };
 		36918C1223978E58002A9994 /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
+		36A92C2E239E7DD9001017A3 /* LXStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXStatusCell.h; sourceTree = "<group>"; };
+		36A92C2F239E7DD9001017A3 /* LXStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXStatusCell.m; sourceTree = "<group>"; };
+		36A92C31239E7EFA001017A3 /* LXOriginalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXOriginalView.h; sourceTree = "<group>"; };
+		36A92C32239E7EFA001017A3 /* LXOriginalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXOriginalView.m; sourceTree = "<group>"; };
+		36A92C34239E7F18001017A3 /* LXRetweetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXRetweetView.h; sourceTree = "<group>"; };
+		36A92C35239E7F18001017A3 /* LXRetweetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXRetweetView.m; sourceTree = "<group>"; };
+		36A92C37239E7F2D001017A3 /* LXStatusToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXStatusToolBar.h; sourceTree = "<group>"; };
+		36A92C38239E7F2D001017A3 /* LXStatusToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXStatusToolBar.m; sourceTree = "<group>"; };
 		36EC1380239B452D00BD25C9 /* LXOAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXOAuthViewController.h; sourceTree = "<group>"; };
 		36EC1381239B452D00BD25C9 /* LXOAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXOAuthViewController.m; sourceTree = "<group>"; };
 		36EC1383239B4ECE00BD25C9 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
@@ -311,6 +323,14 @@
 				368EEAD82397B29F00B4DB27 /* LXCover.m */,
 				368EEADB2397B84800B4DB27 /* LXPopMenu.h */,
 				368EEADC2397B84800B4DB27 /* LXPopMenu.m */,
+				36A92C2E239E7DD9001017A3 /* LXStatusCell.h */,
+				36A92C2F239E7DD9001017A3 /* LXStatusCell.m */,
+				36A92C31239E7EFA001017A3 /* LXOriginalView.h */,
+				36A92C32239E7EFA001017A3 /* LXOriginalView.m */,
+				36A92C34239E7F18001017A3 /* LXRetweetView.h */,
+				36A92C35239E7F18001017A3 /* LXRetweetView.m */,
+				36A92C37239E7F2D001017A3 /* LXStatusToolBar.h */,
+				36A92C38239E7F2D001017A3 /* LXStatusToolBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -667,9 +687,12 @@
 				36EC13A3239B9AA200BD25C9 /* GlobalUtil.m in Sources */,
 				368EEAD62397A8F700B4DB27 /* UIBarButtonItem+Item.m in Sources */,
 				3649B52F239BAA7F00A613B5 /* LXUser.m in Sources */,
+				36A92C30239E7DD9001017A3 /* LXStatusCell.m in Sources */,
 				368EEACD2397A45A00B4DB27 /* LXNavigationController.m in Sources */,
 				365BD2102397F2CE00A9EE27 /* LXMineViewController.m in Sources */,
 				365BD21823993A0F00A9EE27 /* CustomTabBar.m in Sources */,
+				36A92C36239E7F18001017A3 /* LXRetweetView.m in Sources */,
+				36A92C39239E7F2D001017A3 /* LXStatusToolBar.m in Sources */,
 				368EEADD2397B84800B4DB27 /* LXPopMenu.m in Sources */,
 				368EEAE02397BB1600B4DB27 /* LXOneViewController.m in Sources */,
 				368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */,
@@ -683,6 +706,7 @@
 				36EC1382239B452D00BD25C9 /* LXOAuthViewController.m in Sources */,
 				366C1A8F239E2B7700B59001 /* LXStatusParam.m in Sources */,
 				366C1A9D239E49B200B59001 /* LXUserTool.m in Sources */,
+				36A92C33239E7EFA001017A3 /* LXOriginalView.m in Sources */,
 				3649B52C239BA9C800A613B5 /* LXStatus.m in Sources */,
 				36918C1723978E58002A9994 /* LXTabBar.m in Sources */,
 				36EC13A0239B9A7E00BD25C9 /* AccountUtil.m in Sources */,

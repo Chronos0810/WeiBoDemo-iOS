@@ -20,6 +20,7 @@
 #import "LXUserTool.h"
 #import "LXAccount.h"
 #import "AccountUtil.h"
+#import "LXStatusCell.h"
 
 @interface LXHomeViewController ()<LXCoverDelegate>
 
@@ -207,16 +208,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+    LXStatusCell *cell = [LXStatusCell cellWithTableView:tableView];
     
-    LXStatus *status = self.statusList[indexPath.row];\
-    cell.textLabel.text = status.user.name;
-    cell.detailTextLabel.text = status.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:status.user.profile_image_url] placeholderImage: [UIImage imageNamed:@"timeline_image_placeholder"]];
+    LXStatus *status = self.statusList[indexPath.row];
+    cell.status = status;
+//    cell.textLabel.text = status.user.name;
+//    cell.detailTextLabel.text = status.text;
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:status.user.profile_image_url] placeholderImage: [UIImage imageNamed:@"timeline_image_placeholder"]];
+    
     
     return cell;
 }
