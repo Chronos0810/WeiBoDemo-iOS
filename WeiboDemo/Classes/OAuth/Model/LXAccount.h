@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *expires_in;
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, strong) NSDate *expires_date;
+@property (nonatomic, copy) NSString *name;
 
 + (instancetype)accountWithDict:(NSDictionary *)dict;
 

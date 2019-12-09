@@ -9,9 +9,8 @@
 #import "LXOAuthViewController.h"
 #import "MBProgressHUD+Ext.h"
 #import "AFNetworking.h"
-#import "LXAccount.h"
-#import "AccountUtil.h"
 #import "GlobalUtil.h"
+#import "AccountUtil.h"
 
 #define Client_ID    @"2975493909"
 #define Redirect_Uri @"http://www.baidu.com"
@@ -65,22 +64,10 @@
 }
 
 - (void)accessTokenWithCode:(NSString *)code{
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"client_id"] = Client_ID;
-    params[@"client_secret"] = @"179b0c3df4751fb73fad92ec2e4005b1";
-    params[@"grant_type"] = @"authorization_code";
-    params[@"code"] = code;
-    params[@"redirect_uri"] = Redirect_Uri;
-        
-    [[AFHTTPSessionManager manager] POST:[NSString stringWithFormat:@"%@%@",BASE_URL,@"/oauth2/access_token"] parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        GlobalLog(@"%@", responseObject);
-        LXAccount *account = [LXAccount accountWithDict:responseObject];
-        [AccountUtil saveAccount:account];
-        
+    
+    [AccountUtil accountWithCode:code success:^{
         GlobalKeyWindow.rootViewController = [GlobalUtil chooseRootViewController];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSError * _Nonnull error) {
         
     }];
 }

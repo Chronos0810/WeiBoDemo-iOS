@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (LXAccount *)account;
 
++ (void)accountWithCode:(NSString *)code success:(void(^)(void))success failure:(void(^)(NSError *error))failure;
+
 @end
 
 NS_ASSUME_NONNULL_END

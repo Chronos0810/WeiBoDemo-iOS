@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,15 @@
 		365BD21823993A0F00A9EE27 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 365BD21723993A0F00A9EE27 /* CustomTabBar.m */; };
 		365BD21B23993C0A00A9EE27 /* CustomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 365BD21A23993C0A00A9EE27 /* CustomTabBarButton.m */; };
 		365BD21E23993E7700A9EE27 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 365BD21D23993E7700A9EE27 /* CustomBadge.m */; };
+		366C1A85239DF28100B59001 /* NetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A84239DF28100B59001 /* NetworkUtil.m */; };
+		366C1A89239E27C500B59001 /* LXStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A88239E27C500B59001 /* LXStatusTool.m */; };
+		366C1A8F239E2B7700B59001 /* LXStatusParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A8E239E2B7700B59001 /* LXStatusParam.m */; };
+		366C1A92239E2CBE00B59001 /* LXStatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A91239E2CBE00B59001 /* LXStatusResult.m */; };
+		366C1A95239E345B00B59001 /* LXAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A94239E345B00B59001 /* LXAccountParam.m */; };
+		366C1A99239E431F00B59001 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 366C1A97239E431F00B59001 /* silence.mp3 */; };
+		366C1A9A239E431F00B59001 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 366C1A98239E431F00B59001 /* test.mp3 */; };
+		366C1A9D239E49B200B59001 /* LXUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A9C239E49B200B59001 /* LXUserTool.m */; };
+		366C1AA0239E4A7600B59001 /* LXUserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A9F239E4A7600B59001 /* LXUserParam.m */; };
 		368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC023979B2700B4DB27 /* LXSearchBar.m */; };
 		368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */; };
 		368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */; };
@@ -66,6 +75,22 @@
 		365BD21A23993C0A00A9EE27 /* CustomTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarButton.m; sourceTree = "<group>"; };
 		365BD21C23993E7700A9EE27 /* CustomBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
 		365BD21D23993E7700A9EE27 /* CustomBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
+		366C1A83239DF28100B59001 /* NetworkUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkUtil.h; sourceTree = "<group>"; };
+		366C1A84239DF28100B59001 /* NetworkUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkUtil.m; sourceTree = "<group>"; };
+		366C1A87239E27C500B59001 /* LXStatusTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXStatusTool.h; sourceTree = "<group>"; };
+		366C1A88239E27C500B59001 /* LXStatusTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXStatusTool.m; sourceTree = "<group>"; };
+		366C1A8D239E2B7700B59001 /* LXStatusParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXStatusParam.h; sourceTree = "<group>"; };
+		366C1A8E239E2B7700B59001 /* LXStatusParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXStatusParam.m; sourceTree = "<group>"; };
+		366C1A90239E2CBE00B59001 /* LXStatusResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXStatusResult.h; sourceTree = "<group>"; };
+		366C1A91239E2CBE00B59001 /* LXStatusResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXStatusResult.m; sourceTree = "<group>"; };
+		366C1A93239E345B00B59001 /* LXAccountParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAccountParam.h; sourceTree = "<group>"; };
+		366C1A94239E345B00B59001 /* LXAccountParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAccountParam.m; sourceTree = "<group>"; };
+		366C1A97239E431F00B59001 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
+		366C1A98239E431F00B59001 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		366C1A9B239E49B200B59001 /* LXUserTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXUserTool.h; sourceTree = "<group>"; };
+		366C1A9C239E49B200B59001 /* LXUserTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXUserTool.m; sourceTree = "<group>"; };
+		366C1A9E239E4A7600B59001 /* LXUserParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXUserParam.h; sourceTree = "<group>"; };
+		366C1A9F239E4A7600B59001 /* LXUserParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXUserParam.m; sourceTree = "<group>"; };
 		368EEABF23979B2700B4DB27 /* LXSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSearchBar.h; sourceTree = "<group>"; };
 		368EEAC023979B2700B4DB27 /* LXSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSearchBar.m; sourceTree = "<group>"; };
 		368EEAC52397A0AA00B4DB27 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -148,6 +173,7 @@
 		361AA2E3235F05600065CC8B /* WeiboDemo */ = {
 			isa = PBXGroup;
 			children = (
+				366C1A96239E431F00B59001 /* Mp3 */,
 				361AA2F0235F05670065CC8B /* Assets.xcassets */,
 				36918BF323978E58002A9994 /* Classes */,
 				361AA2F5235F05670065CC8B /* Info.plist */,
@@ -169,6 +195,37 @@
 				365BD21D23993E7700A9EE27 /* CustomBadge.m */,
 			);
 			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		366C1A8A239E2B3200B59001 /* ParamModel */ = {
+			isa = PBXGroup;
+			children = (
+				366C1A8D239E2B7700B59001 /* LXStatusParam.h */,
+				366C1A8E239E2B7700B59001 /* LXStatusParam.m */,
+				366C1A93239E345B00B59001 /* LXAccountParam.h */,
+				366C1A94239E345B00B59001 /* LXAccountParam.m */,
+				366C1A9E239E4A7600B59001 /* LXUserParam.h */,
+				366C1A9F239E4A7600B59001 /* LXUserParam.m */,
+			);
+			path = ParamModel;
+			sourceTree = "<group>";
+		};
+		366C1A8C239E2B5300B59001 /* ResultModel */ = {
+			isa = PBXGroup;
+			children = (
+				366C1A90239E2CBE00B59001 /* LXStatusResult.h */,
+				366C1A91239E2CBE00B59001 /* LXStatusResult.m */,
+			);
+			path = ResultModel;
+			sourceTree = "<group>";
+		};
+		366C1A96239E431F00B59001 /* Mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				366C1A97239E431F00B59001 /* silence.mp3 */,
+				366C1A98239E431F00B59001 /* test.mp3 */,
+			);
+			path = Mp3;
 			sourceTree = "<group>";
 		};
 		368EEAE123990AF900B4DB27 /* NewFeature */ = {
@@ -455,10 +512,18 @@
 		36EC139D239B9A6700BD25C9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				366C1A8C239E2B5300B59001 /* ResultModel */,
+				366C1A8A239E2B3200B59001 /* ParamModel */,
 				36EC139E239B9A7E00BD25C9 /* AccountUtil.h */,
 				36EC139F239B9A7E00BD25C9 /* AccountUtil.m */,
 				36EC13A1239B9AA200BD25C9 /* GlobalUtil.h */,
 				36EC13A2239B9AA200BD25C9 /* GlobalUtil.m */,
+				366C1A83239DF28100B59001 /* NetworkUtil.h */,
+				366C1A84239DF28100B59001 /* NetworkUtil.m */,
+				366C1A87239E27C500B59001 /* LXStatusTool.h */,
+				366C1A88239E27C500B59001 /* LXStatusTool.m */,
+				366C1A9B239E49B200B59001 /* LXUserTool.h */,
+				366C1A9C239E49B200B59001 /* LXUserTool.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -491,6 +556,7 @@
 				361AA2DD235F05600065CC8B /* Sources */,
 				361AA2DE235F05600065CC8B /* Frameworks */,
 				361AA2DF235F05600065CC8B /* Resources */,
+				FC4AAC51B9AED6B0DA4E320C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -539,8 +605,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366C1A99239E431F00B59001 /* silence.mp3 in Resources */,
 				361AA2F4235F05670065CC8B /* LaunchScreen.storyboard in Resources */,
 				361AA2F1235F05670065CC8B /* Assets.xcassets in Resources */,
+				366C1A9A239E431F00B59001 /* test.mp3 in Resources */,
 				36EC1384239B4ECE00BD25C9 /* podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +638,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FC4AAC51B9AED6B0DA4E320C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeiboDemo/Pods-WeiboDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeiboDemo/Pods-WeiboDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeiboDemo/Pods-WeiboDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -592,19 +677,26 @@
 				36918C1323978E58002A9994 /* UIImage+Image.m in Sources */,
 				368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */,
 				368EEAED23990EDD00B4DB27 /* LXNewFeatureCell.m in Sources */,
+				366C1A89239E27C500B59001 /* LXStatusTool.m in Sources */,
 				36918C1523978E58002A9994 /* AppDelegate.m in Sources */,
 				36918C1623978E58002A9994 /* LXTabBarController.m in Sources */,
 				36EC1382239B452D00BD25C9 /* LXOAuthViewController.m in Sources */,
+				366C1A8F239E2B7700B59001 /* LXStatusParam.m in Sources */,
+				366C1A9D239E49B200B59001 /* LXUserTool.m in Sources */,
 				3649B52C239BA9C800A613B5 /* LXStatus.m in Sources */,
 				36918C1723978E58002A9994 /* LXTabBar.m in Sources */,
 				36EC13A0239B9A7E00BD25C9 /* AccountUtil.m in Sources */,
+				366C1A85239DF28100B59001 /* NetworkUtil.m in Sources */,
 				365BD20D2397F0CF00A9EE27 /* LXMessageViewController.m in Sources */,
 				368EEAD32397A7DB00B4DB27 /* LXTitleButton.m in Sources */,
 				368EEAE923990BB600B4DB27 /* LXNewFeatureController.m in Sources */,
 				365BD21B23993C0A00A9EE27 /* CustomTabBarButton.m in Sources */,
 				365BD21E23993E7700A9EE27 /* CustomBadge.m in Sources */,
 				368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */,
+				366C1A95239E345B00B59001 /* LXAccountParam.m in Sources */,
+				366C1A92239E2CBE00B59001 /* LXStatusResult.m in Sources */,
 				365BD215239939B100A9EE27 /* CustomTabBarController.m in Sources */,
+				366C1AA0239E4A7600B59001 /* LXUserParam.m in Sources */,
 				368EEAD02397A74800B4DB27 /* LXHomeViewController.m in Sources */,
 				36EC138B239B85D000BD25C9 /* LXAccount.m in Sources */,
 			);

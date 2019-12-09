@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LXStatus : NSObject
 
 @property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, copy) NSString *id;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *source;
 @property (nonatomic, strong) LXUser *user;

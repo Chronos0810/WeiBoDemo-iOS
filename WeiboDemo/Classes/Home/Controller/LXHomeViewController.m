@@ -12,13 +12,14 @@
 #import "LXCover.h"
 #import "LXPopMenu.h"
 #import "LXOneViewController.h"
-#import "AFNetworking.h"
-#import "AccountUtil.h"
-#import "LXAccount.h"
-#import "MJExtension.h"
 #import "LXStatus.h"
 #import "LXUser.h"
 #import <SDWebImage/SDWebImage.h>
+#import "MJRefresh.h"
+#import "LXStatusTool.h"
+#import "LXUserTool.h"
+#import "LXAccount.h"
+#import "AccountUtil.h"
 
 @interface LXHomeViewController ()<LXCoverDelegate>
 
@@ -51,7 +52,27 @@
     
     [self setUpNavigationBar];
     
-    [self getLatestNews];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self getLatestNews];
+    }];
+    
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self loadMoreNews];
+    }];
+    
+    [LXUserTool userInfoWithSuccess:^(LXUser * _Nonnull userInfo) {
+        
+        [self.titleButton setTitle:userInfo.name forState:UIControlStateNormal];
+        LXAccount *account = [AccountUtil account];
+        account.name = userInfo.name;
+        [AccountUtil saveAccount:account];
+        
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
+    
 }
 
 - (void)setUpNavigationBar{
@@ -61,7 +82,9 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_pop"] highImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"] target:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
     
     LXTitleButton *titleButton = [LXTitleButton buttonWithType:UIButtonTypeCustom];
-    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    
+    NSString *title = [AccountUtil account].name?:@"首页";
+    [titleButton setTitle:title forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
     titleButton.adjustsImageWhenHighlighted = NO;
@@ -103,29 +126,82 @@
     self.titleButton.selected = NO;
 }
 
+- (void)refresh{
+    [self.tableView.mj_header beginRefreshing];
+}
+
 #pragma mark - get latest news
 - (void)getLatestNews{
-    LXAccount *account = [AccountUtil account];
     
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"access_token"] = account.access_token;
-                                   
-    [[AFHTTPSessionManager manager] GET:[NSString stringWithFormat:@"%@%@",BASE_URL,@"/2/statuses/home_timeline.json"] parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *sinceId = nil;
+    if (self.statusList.count) {
+        sinceId = [self.statusList[0] id];
+    }
+    [LXStatusTool newStatusWithSinceId:sinceId success:^(NSArray * _Nonnull statuses) {
         
-        NSArray *responseArr = responseObject[@"statuses"];
-        self.statusList = [LXStatus mj_objectArrayWithKeyValuesArray:responseArr];
-        
+        [self.tableView.mj_header endRefreshing];
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
+        [self.statusList insertObjects:statuses atIndexes:indexSet];
         [self.tableView reloadData];
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        GlobalLog(@"%@", error);
+        [self showNewStatusCount:statuses.count];
+        
+    } failure:^(NSError * _Nonnull error) {
+        
     }];
 }
 
+- (void)showNewStatusCount:(NSUInteger)count{
+    if (count == 0) return;
+    
+    CGFloat w = self.view.width;
+    CGFloat h = 35;
+    CGFloat x = 0;
+    CGFloat y = CGRectGetMaxY(self.navigationController.navigationBar.frame) - h;
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x, y, w, h)];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    
+    label.text = [NSString stringWithFormat:@"最新微博数:%lu",(unsigned long)count];
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        label.transform = CGAffineTransformMakeTranslation(0, h);
+    } completion:^(BOOL finished) {
+        
+        [UIView animateWithDuration:0.25 delay:2 options:UIViewAnimationOptionCurveLinear animations:^{
+            label.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
+
+}
+
+#pragma mark - load more
+- (void)loadMoreNews{
+    
+    NSString *maxIdStr = nil;
+    if (self.statusList.count) {
+        long long maxId = [[[self.statusList lastObject] id] longLongValue] - 1;
+        maxIdStr = [NSString stringWithFormat:@"%lld", maxId];
+    }
+    [LXStatusTool moreStatusWithMaxId:maxIdStr success:^(NSArray * _Nonnull statuses) {
+        
+        [self.tableView.mj_footer endRefreshing];
+        [self.statusList addObjectsFromArray:statuses];
+        [self.tableView reloadData];
+        
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
+
+}
+
 #pragma mark - Table view data source
-
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.statusList.count;
 }
@@ -134,13 +210,13 @@
     static NSString *ID = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
     
     LXStatus *status = self.statusList[indexPath.row];\
     cell.textLabel.text = status.user.name;
     cell.detailTextLabel.text = status.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:status.user.profile_image_url] placeholderImage:nil];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:status.user.profile_image_url] placeholderImage: [UIImage imageNamed:@"timeline_image_placeholder"]];
     
     return cell;
 }
