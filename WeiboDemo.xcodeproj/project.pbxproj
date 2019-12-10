@@ -26,6 +26,8 @@
 		366C1A9A239E431F00B59001 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 366C1A98239E431F00B59001 /* test.mp3 */; };
 		366C1A9D239E49B200B59001 /* LXUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A9C239E49B200B59001 /* LXUserTool.m */; };
 		366C1AA0239E4A7600B59001 /* LXUserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A9F239E4A7600B59001 /* LXUserParam.m */; };
+		367D2AA4239F33AC009AF4A5 /* LXStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA3239F33AC009AF4A5 /* LXStatusFrame.m */; };
+		367D2AA7239F7616009AF4A5 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA5239F7616009AF4A5 /* NSDate+MJ.m */; };
 		368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC023979B2700B4DB27 /* LXSearchBar.m */; };
 		368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */; };
 		368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */; };
@@ -95,6 +97,10 @@
 		366C1A9C239E49B200B59001 /* LXUserTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXUserTool.m; sourceTree = "<group>"; };
 		366C1A9E239E4A7600B59001 /* LXUserParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXUserParam.h; sourceTree = "<group>"; };
 		366C1A9F239E4A7600B59001 /* LXUserParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXUserParam.m; sourceTree = "<group>"; };
+		367D2AA2239F33AC009AF4A5 /* LXStatusFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXStatusFrame.h; path = WeiboDemo/Classes/Other/Utils/ParamModel/LXStatusFrame.h; sourceTree = SOURCE_ROOT; };
+		367D2AA3239F33AC009AF4A5 /* LXStatusFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LXStatusFrame.m; path = WeiboDemo/Classes/Other/Utils/ParamModel/LXStatusFrame.m; sourceTree = SOURCE_ROOT; };
+		367D2AA5239F7616009AF4A5 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
+		367D2AA6239F7616009AF4A5 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
 		368EEABF23979B2700B4DB27 /* LXSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSearchBar.h; sourceTree = "<group>"; };
 		368EEAC023979B2700B4DB27 /* LXSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSearchBar.m; sourceTree = "<group>"; };
 		368EEAC52397A0AA00B4DB27 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -310,6 +316,8 @@
 				3649B52B239BA9C800A613B5 /* LXStatus.m */,
 				3649B52D239BAA7F00A613B5 /* LXUser.h */,
 				3649B52E239BAA7F00A613B5 /* LXUser.m */,
+				367D2AA2239F33AC009AF4A5 /* LXStatusFrame.h */,
+				367D2AA3239F33AC009AF4A5 /* LXStatusFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,6 +394,8 @@
 		36918BFE23978E58002A9994 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				367D2AA6239F7616009AF4A5 /* NSDate+MJ.h */,
+				367D2AA5239F7616009AF4A5 /* NSDate+MJ.m */,
 				368EEAD42397A8F700B4DB27 /* UIBarButtonItem+Item.h */,
 				368EEAD52397A8F700B4DB27 /* UIBarButtonItem+Item.m */,
 				36918C0023978E58002A9994 /* UIImage+Image.h */,
@@ -693,6 +703,7 @@
 				365BD21823993A0F00A9EE27 /* CustomTabBar.m in Sources */,
 				36A92C36239E7F18001017A3 /* LXRetweetView.m in Sources */,
 				36A92C39239E7F2D001017A3 /* LXStatusToolBar.m in Sources */,
+				367D2AA7239F7616009AF4A5 /* NSDate+MJ.m in Sources */,
 				368EEADD2397B84800B4DB27 /* LXPopMenu.m in Sources */,
 				368EEAE02397BB1600B4DB27 /* LXOneViewController.m in Sources */,
 				368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */,
@@ -709,6 +720,7 @@
 				36A92C33239E7EFA001017A3 /* LXOriginalView.m in Sources */,
 				3649B52C239BA9C800A613B5 /* LXStatus.m in Sources */,
 				36918C1723978E58002A9994 /* LXTabBar.m in Sources */,
+				367D2AA4239F33AC009AF4A5 /* LXStatusFrame.m in Sources */,
 				36EC13A0239B9A7E00BD25C9 /* AccountUtil.m in Sources */,
 				366C1A85239DF28100B59001 /* NetworkUtil.m in Sources */,
 				365BD20D2397F0CF00A9EE27 /* LXMessageViewController.m in Sources */,

@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LXStatusFrame;
 @interface LXOriginalView : UIView
+
+@property (nonatomic, strong) LXStatusFrame* statusFrame;
 
 @end
 

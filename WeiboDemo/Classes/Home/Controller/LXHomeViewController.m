@@ -21,12 +21,13 @@
 #import "LXAccount.h"
 #import "AccountUtil.h"
 #import "LXStatusCell.h"
+#import "LXStatusFrame.h"
 
 @interface LXHomeViewController ()<LXCoverDelegate>
 
 @property (nonatomic, strong) LXOneViewController *one;
 @property (nonatomic, weak) LXTitleButton *titleButton;
-@property (nonatomic, strong) NSMutableArray *statusList;
+@property (nonatomic, strong) NSMutableArray *statusFrameList;
 
 @end
 
@@ -40,17 +41,19 @@
     return _one;
 }
 
-- (NSMutableArray *)statusList{
-    if (_statusList == nil) {
-        _statusList = [NSMutableArray array];
+- (NSMutableArray *)statusFrameList{
+    if (_statusFrameList == nil) {
+        _statusFrameList = [NSMutableArray array];
     }
     
-    return _statusList;
+    return _statusFrameList;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
     [self setUpNavigationBar];
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -135,20 +138,29 @@
 - (void)getLatestNews{
     
     NSString *sinceId = nil;
-    if (self.statusList.count) {
-        sinceId = [self.statusList[0] id];
+    if (self.statusFrameList.count) {
+        LXStatus *status = [self.statusFrameList[0] status];
+        sinceId = [status id];
     }
     [LXStatusTool newStatusWithSinceId:sinceId success:^(NSArray * _Nonnull statuses) {
         
         [self.tableView.mj_header endRefreshing];
+        
+        NSMutableArray *frameList = [NSMutableArray array];
+        for (LXStatus *status in statuses) {
+            LXStatusFrame *statusFrame = [[LXStatusFrame alloc] init];
+            statusFrame.status = status;
+            [frameList addObject:statusFrame];
+        }
+        
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
-        [self.statusList insertObjects:statuses atIndexes:indexSet];
+        [self.statusFrameList insertObjects:frameList atIndexes:indexSet];
         [self.tableView reloadData];
         
         [self showNewStatusCount:statuses.count];
         
     } failure:^(NSError * _Nonnull error) {
-        
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
@@ -186,72 +198,49 @@
 - (void)loadMoreNews{
     
     NSString *maxIdStr = nil;
-    if (self.statusList.count) {
-        long long maxId = [[[self.statusList lastObject] id] longLongValue] - 1;
+    if (self.statusFrameList.count) {
+        LXStatus *status = [self.statusFrameList[0] status];
+        long long maxId = [[status id] longLongValue] - 1;
         maxIdStr = [NSString stringWithFormat:@"%lld", maxId];
     }
     [LXStatusTool moreStatusWithMaxId:maxIdStr success:^(NSArray * _Nonnull statuses) {
         
         [self.tableView.mj_footer endRefreshing];
-        [self.statusList addObjectsFromArray:statuses];
+        
+        NSMutableArray *frameList = [NSMutableArray array];
+        for (LXStatus *status in statuses) {
+            LXStatusFrame *statusFrame = [[LXStatusFrame alloc] init];
+            statusFrame.status = status;
+            [frameList addObject:statusFrame];
+        }
+        [self.statusFrameList addObjectsFromArray:frameList];
         [self.tableView reloadData];
         
     } failure:^(NSError * _Nonnull error) {
-        
+        [self.tableView.mj_footer endRefreshing];
     }];
 
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.statusList.count;
+    return self.statusFrameList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LXStatusCell *cell = [LXStatusCell cellWithTableView:tableView];
     
-    LXStatus *status = self.statusList[indexPath.row];
-    cell.status = status;
-//    cell.textLabel.text = status.user.name;
-//    cell.detailTextLabel.text = status.text;
-//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:status.user.profile_image_url] placeholderImage: [UIImage imageNamed:@"timeline_image_placeholder"]];
-    
+    LXStatusFrame *statusFrame = self.statusFrameList[indexPath.row];
+    cell.statusFrame = statusFrame;
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LXStatusFrame *statusFrame = self.statusFrameList[indexPath.row];
+    return statusFrame.cellHeight;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 @end

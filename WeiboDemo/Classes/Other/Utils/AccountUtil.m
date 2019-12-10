@@ -12,7 +12,7 @@
 #import "NetworkUtil.h"
 #import <MJExtension.h>
 
-#define Client_ID    @"2975493909"
+#define Client_ID    @"1856772886"
 #define Redirect_Uri @"http://www.baidu.com"
 #define AccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"account.data"]
 
@@ -42,7 +42,7 @@ static LXAccount *_account;
 + (void)accountWithCode:(NSString *)code success:(void(^)(void))success failure:(void(^)(NSError *error))failure{
     LXAccountParam *param = [[LXAccountParam alloc] init];
     param.client_id = Client_ID;
-    param.client_secret = @"179b0c3df4751fb73fad92ec2e4005b1";
+    param.client_secret = @"135260ffad99fdc0f28926810a79fb88";
     param.grant_type = @"authorization_code";
     param.code = code;
     param.redirect_uri = Redirect_Uri;

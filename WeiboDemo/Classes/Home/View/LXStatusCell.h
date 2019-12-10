@@ -10,10 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class LXStatus;
+@class LXStatusFrame;
 @interface LXStatusCell : UITableViewCell
 
-@property (nonatomic, strong) LXStatus* status;
+@property (nonatomic, strong) LXStatusFrame* statusFrame;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 

@@ -12,7 +12,7 @@
 #import "GlobalUtil.h"
 #import "AccountUtil.h"
 
-#define Client_ID    @"2975493909"
+#define Client_ID    @"1856772886"
 #define Redirect_Uri @"http://www.baidu.com"
 
 @interface LXOAuthViewController ()<UIWebViewDelegate>

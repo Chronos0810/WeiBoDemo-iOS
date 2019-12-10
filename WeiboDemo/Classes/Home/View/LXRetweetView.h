@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LXRetweetView : UIView
+@class LXStatusFrame;
+@interface LXRetweetView : UIImageView
+
+@property (nonatomic, strong) LXStatusFrame* statusFrame;
 
 @end
 

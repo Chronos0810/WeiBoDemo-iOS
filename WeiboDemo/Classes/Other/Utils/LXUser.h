@@ -17,11 +17,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *province;
 @property (nonatomic, copy) NSString *city;
 @property (nonatomic, copy) NSString *location;
-//@property (nonatomic, copy) NSString *description;
 @property (nonatomic, copy) NSString *url;
 @property (nonatomic, copy) NSString *profile_image_url;
 @property (nonatomic, copy) NSString *domain;
 @property (nonatomic, copy) NSString *gender;
+
+/** 会员类型 > 2代表是会员 */
+@property (nonatomic, assign) int mbtype;
+/** 会员等级 */
+@property (nonatomic, assign) int mbrank;
+
+
+@property (nonatomic, assign,getter=isVip) BOOL vip;
 
 @end
 

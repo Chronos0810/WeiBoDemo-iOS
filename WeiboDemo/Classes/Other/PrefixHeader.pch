@@ -17,13 +17,17 @@
 // ...表示宏定义的可变参数
 // __VA_ARGS__:表示函数里面的可变参数
 #ifdef DEBUG // 调试
-
 #define GlobalLog(...) NSLog(__VA_ARGS__)
-
 #else // 发布
-
 #define GlobalLog(...)
-
 #endif
+
+
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define StatusCellMargin 10
+#define CellNameFont [UIFont systemFontOfSize:13]
+#define CellTimeFont [UIFont systemFontOfSize:12]
+#define CellSourceFont CellTimeFont
+#define CellTextFont [UIFont systemFontOfSize:15]
 
 #endif

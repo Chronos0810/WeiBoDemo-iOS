@@ -19,6 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *source;
 @property (nonatomic, strong) LXUser *user;
 
+@property (nonatomic, assign) int comments_count;
+@property (nonatomic, assign) int reposts_count;
+@property (nonatomic, assign) int attitudes_count;
+
+@property (nonatomic, strong) NSArray *pic_urls;
+
+@property (nonatomic, strong) LXStatus *retweeted_status;
+
 @end
 
 NS_ASSUME_NONNULL_END
