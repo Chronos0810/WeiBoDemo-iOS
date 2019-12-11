@@ -11,6 +11,7 @@
 #import "LXStatusFrame.h"
 #import "LXUser.h"
 #import <UIImageView+WebCache.h>
+#import "LXPhotosView.h"
 
 @interface LXOriginalView()
 
@@ -20,6 +21,7 @@
 @property (nonatomic, weak) UILabel *timeView;
 @property (nonatomic, weak) UILabel *sourceView;
 @property (nonatomic, weak) UILabel *textView;
+@property (nonatomic, weak) LXPhotosView *photosView;
 
 @end
 
@@ -65,6 +67,10 @@
     textView.numberOfLines = 0;
     [self addSubview:textView];
     _textView = textView;
+    
+    LXPhotosView *photosView = [[LXPhotosView alloc] init];
+    [self addSubview:photosView];
+     _photosView = photosView;
 }
 
 - (void)setStatusFrame:(LXStatusFrame *)statusFrame{
@@ -89,6 +95,7 @@
     _timeView.frame = _statusFrame.originalTimeFrame;
     _sourceView.frame = _statusFrame.originalSourceFrame;
     _textView.frame = _statusFrame.originalTextFrame;
+    _photosView.frame = _statusFrame.originalPhotosFrame;
     
 }
 
@@ -111,6 +118,8 @@
     _sourceView.text = status.source;
     
     _textView.text = status.text;
+    
+    _photosView.pic_urls = _statusFrame.status.pic_urls;
     
 }
 

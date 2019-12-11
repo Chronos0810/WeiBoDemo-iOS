@@ -199,7 +199,7 @@
     
     NSString *maxIdStr = nil;
     if (self.statusFrameList.count) {
-        LXStatus *status = [self.statusFrameList[0] status];
+        LXStatus *status = [[self.statusFrameList lastObject] status];
         long long maxId = [[status id] longLongValue] - 1;
         maxIdStr = [NSString stringWithFormat:@"%lld", maxId];
     }

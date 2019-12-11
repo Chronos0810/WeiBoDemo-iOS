@@ -25,11 +25,18 @@
         [button setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
         [button sizeToFit];
         
+        [button addTarget:self action:@selector(plusClicked) forControlEvents:UIControlEventTouchUpInside];
         _plusButton = button;
         [self addSubview:_plusButton];
     }
     
     return _plusButton;
+}
+
+- (void)plusClicked{
+    UITabBarItem *plusItem = [[UITabBarItem alloc] init];
+    plusItem.tag = 2;
+    [self.delegate tabBar:self didSelectItem:plusItem];
 }
 
 - (void)layoutSubviews{

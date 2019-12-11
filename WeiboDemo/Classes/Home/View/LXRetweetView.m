@@ -10,11 +10,13 @@
 #import "LXStatusFrame.h"
 #import "LXStatus.h"
 #import "LXUser.h"
+#import "LXPhotosView.h"
 
 @interface LXRetweetView()
 
 @property (nonatomic, weak) UILabel *nameView;
 @property (nonatomic, weak) UILabel *textView;
+@property (nonatomic, weak) LXPhotosView *photosView;
 
 @end
 
@@ -43,6 +45,10 @@
     textView.numberOfLines = 0;
     [self addSubview:textView];
     _textView = textView;
+    
+    LXPhotosView *photosView = [[LXPhotosView alloc] init];
+    [self addSubview:photosView];
+    _photosView = photosView;
 }
 
 - (void)setStatusFrame:(LXStatusFrame *)statusFrame{
@@ -59,6 +65,8 @@
     
     _textView.frame = _statusFrame.reTweetTextFrame;
     
+    _photosView.frame = _statusFrame.reTweetPhotosFrame;
+    
 }
 
 - (void)initData{
@@ -66,6 +74,8 @@
     _nameView.text = [NSString stringWithFormat:@"@%@", _statusFrame.status.retweeted_status.user.name];
     
     _textView.text = _statusFrame.status.retweeted_status.text;
+    
+    _photosView.pic_urls = _statusFrame.status.retweeted_status.pic_urls;
 }
 
 @end

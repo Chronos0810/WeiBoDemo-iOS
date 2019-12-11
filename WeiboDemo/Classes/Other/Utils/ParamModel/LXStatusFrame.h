@@ -23,10 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGRect originalTimeFrame;
 @property (nonatomic, assign) CGRect originalSourceFrame;
 @property (nonatomic, assign) CGRect originalTextFrame;
+@property (nonatomic, assign) CGRect originalPhotosFrame;
 
 @property (nonatomic, assign) CGRect reTweetViewFrame;
 @property (nonatomic, assign) CGRect reTweetNameFrame;
 @property (nonatomic, assign) CGRect reTweetTextFrame;
+@property (nonatomic, assign) CGRect reTweetPhotosFrame;
 
 @property (nonatomic, assign) CGRect toolBarViewFrame;
 

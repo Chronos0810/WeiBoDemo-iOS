@@ -28,6 +28,7 @@
 		366C1AA0239E4A7600B59001 /* LXUserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 366C1A9F239E4A7600B59001 /* LXUserParam.m */; };
 		367D2AA4239F33AC009AF4A5 /* LXStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA3239F33AC009AF4A5 /* LXStatusFrame.m */; };
 		367D2AA7239F7616009AF4A5 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA5239F7616009AF4A5 /* NSDate+MJ.m */; };
+		367D2AAA23A0821A009AF4A5 /* LXPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA923A0821A009AF4A5 /* LXPhotosView.m */; };
 		368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC023979B2700B4DB27 /* LXSearchBar.m */; };
 		368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */; };
 		368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */; };
@@ -49,6 +50,19 @@
 		36A92C33239E7EFA001017A3 /* LXOriginalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A92C32239E7EFA001017A3 /* LXOriginalView.m */; };
 		36A92C36239E7F18001017A3 /* LXRetweetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A92C35239E7F18001017A3 /* LXRetweetView.m */; };
 		36A92C39239E7F2D001017A3 /* LXStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A92C38239E7F2D001017A3 /* LXStatusToolBar.m */; };
+		36DDBC5823A08D6000325B48 /* LXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC5723A08D6000325B48 /* LXPhoto.m */; };
+		36DDBC6923A0C3CA00325B48 /* MJPhotoLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC5A23A0C3CA00325B48 /* MJPhotoLoadingView.m */; };
+		36DDBC6A23A0C3CA00325B48 /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC5C23A0C3CA00325B48 /* MJPhotoView.m */; };
+		36DDBC6B23A0C3CA00325B48 /* MJPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36DDBC5E23A0C3CA00325B48 /* MJPhotoBrowser.bundle */; };
+		36DDBC6C23A0C3CA00325B48 /* MJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC5F23A0C3CA00325B48 /* MJPhoto.m */; };
+		36DDBC6D23A0C3CA00325B48 /* MJPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC6423A0C3CA00325B48 /* MJPhotoToolbar.m */; };
+		36DDBC6E23A0C3CA00325B48 /* MJPhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC6623A0C3CA00325B48 /* MJPhotoProgressView.m */; };
+		36DDBC6F23A0C3CA00325B48 /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC6723A0C3CA00325B48 /* SDWebImageManager+MJ.m */; };
+		36DDBC7023A0C3CA00325B48 /* MJPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC6823A0C3CA00325B48 /* MJPhotoBrowser.m */; };
+		36DDBC7323A0D23700325B48 /* LXPhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC7223A0D23700325B48 /* LXPhotoImageView.m */; };
+		36DDBC7823A0D97000325B48 /* LXComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC7723A0D97000325B48 /* LXComposeViewController.m */; };
+		36DDBC7C23A0E5C700325B48 /* LXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC7B23A0E5C700325B48 /* LXTextView.m */; };
+		36DDBC7F23A0EBC900325B48 /* LXComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDBC7E23A0EBC900325B48 /* LXComposeToolBar.m */; };
 		36EC1382239B452D00BD25C9 /* LXOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC1381239B452D00BD25C9 /* LXOAuthViewController.m */; };
 		36EC1384239B4ECE00BD25C9 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 36EC1383239B4ECE00BD25C9 /* podfile */; };
 		36EC1387239B7C1100BD25C9 /* MBProgressHUD+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC1386239B7C1100BD25C9 /* MBProgressHUD+Ext.m */; };
@@ -101,6 +115,8 @@
 		367D2AA3239F33AC009AF4A5 /* LXStatusFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LXStatusFrame.m; path = WeiboDemo/Classes/Other/Utils/ParamModel/LXStatusFrame.m; sourceTree = SOURCE_ROOT; };
 		367D2AA5239F7616009AF4A5 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
 		367D2AA6239F7616009AF4A5 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
+		367D2AA823A0821A009AF4A5 /* LXPhotosView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPhotosView.h; sourceTree = "<group>"; };
+		367D2AA923A0821A009AF4A5 /* LXPhotosView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPhotosView.m; sourceTree = "<group>"; };
 		368EEABF23979B2700B4DB27 /* LXSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSearchBar.h; sourceTree = "<group>"; };
 		368EEAC023979B2700B4DB27 /* LXSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSearchBar.m; sourceTree = "<group>"; };
 		368EEAC52397A0AA00B4DB27 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -143,6 +159,31 @@
 		36A92C35239E7F18001017A3 /* LXRetweetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXRetweetView.m; sourceTree = "<group>"; };
 		36A92C37239E7F2D001017A3 /* LXStatusToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXStatusToolBar.h; sourceTree = "<group>"; };
 		36A92C38239E7F2D001017A3 /* LXStatusToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXStatusToolBar.m; sourceTree = "<group>"; };
+		36DDBC5623A08D6000325B48 /* LXPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXPhoto.h; path = WeiboDemo/Classes/Home/View/LXPhoto.h; sourceTree = SOURCE_ROOT; };
+		36DDBC5723A08D6000325B48 /* LXPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LXPhoto.m; path = WeiboDemo/Classes/Home/View/LXPhoto.m; sourceTree = SOURCE_ROOT; };
+		36DDBC5A23A0C3CA00325B48 /* MJPhotoLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoLoadingView.m; sourceTree = "<group>"; };
+		36DDBC5B23A0C3CA00325B48 /* MJPhotoToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoToolbar.h; sourceTree = "<group>"; };
+		36DDBC5C23A0C3CA00325B48 /* MJPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoView.m; sourceTree = "<group>"; };
+		36DDBC5D23A0C3CA00325B48 /* MJPhotoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoProgressView.h; sourceTree = "<group>"; };
+		36DDBC5E23A0C3CA00325B48 /* MJPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJPhotoBrowser.bundle; sourceTree = "<group>"; };
+		36DDBC5F23A0C3CA00325B48 /* MJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhoto.m; sourceTree = "<group>"; };
+		36DDBC6023A0C3CA00325B48 /* MJPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoBrowser.h; sourceTree = "<group>"; };
+		36DDBC6123A0C3CA00325B48 /* SDWebImageManager+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImageManager+MJ.h"; sourceTree = "<group>"; };
+		36DDBC6223A0C3CA00325B48 /* MJPhotoLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoLoadingView.h; sourceTree = "<group>"; };
+		36DDBC6323A0C3CA00325B48 /* MJPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoView.h; sourceTree = "<group>"; };
+		36DDBC6423A0C3CA00325B48 /* MJPhotoToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoToolbar.m; sourceTree = "<group>"; };
+		36DDBC6523A0C3CA00325B48 /* MJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhoto.h; sourceTree = "<group>"; };
+		36DDBC6623A0C3CA00325B48 /* MJPhotoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoProgressView.m; sourceTree = "<group>"; };
+		36DDBC6723A0C3CA00325B48 /* SDWebImageManager+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+MJ.m"; sourceTree = "<group>"; };
+		36DDBC6823A0C3CA00325B48 /* MJPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoBrowser.m; sourceTree = "<group>"; };
+		36DDBC7123A0D23700325B48 /* LXPhotoImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPhotoImageView.h; sourceTree = "<group>"; };
+		36DDBC7223A0D23700325B48 /* LXPhotoImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPhotoImageView.m; sourceTree = "<group>"; };
+		36DDBC7623A0D97000325B48 /* LXComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXComposeViewController.h; sourceTree = "<group>"; };
+		36DDBC7723A0D97000325B48 /* LXComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXComposeViewController.m; sourceTree = "<group>"; };
+		36DDBC7A23A0E5C700325B48 /* LXTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXTextView.h; sourceTree = "<group>"; };
+		36DDBC7B23A0E5C700325B48 /* LXTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXTextView.m; sourceTree = "<group>"; };
+		36DDBC7D23A0EBC900325B48 /* LXComposeToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXComposeToolBar.h; sourceTree = "<group>"; };
+		36DDBC7E23A0EBC900325B48 /* LXComposeToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXComposeToolBar.m; sourceTree = "<group>"; };
 		36EC1380239B452D00BD25C9 /* LXOAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXOAuthViewController.h; sourceTree = "<group>"; };
 		36EC1381239B452D00BD25C9 /* LXOAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXOAuthViewController.m; sourceTree = "<group>"; };
 		36EC1383239B4ECE00BD25C9 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
@@ -276,6 +317,7 @@
 		36918BF323978E58002A9994 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				36DDBC7423A0D93E00325B48 /* Compose */,
 				36EC137A239B444700BD25C9 /* OAuth */,
 				368EEAE123990AF900B4DB27 /* NewFeature */,
 				36918BF423978E58002A9994 /* Home */,
@@ -318,6 +360,8 @@
 				3649B52E239BAA7F00A613B5 /* LXUser.m */,
 				367D2AA2239F33AC009AF4A5 /* LXStatusFrame.h */,
 				367D2AA3239F33AC009AF4A5 /* LXStatusFrame.m */,
+				36DDBC5623A08D6000325B48 /* LXPhoto.h */,
+				36DDBC5723A08D6000325B48 /* LXPhoto.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +383,10 @@
 				36A92C35239E7F18001017A3 /* LXRetweetView.m */,
 				36A92C37239E7F2D001017A3 /* LXStatusToolBar.h */,
 				36A92C38239E7F2D001017A3 /* LXStatusToolBar.m */,
+				367D2AA823A0821A009AF4A5 /* LXPhotosView.h */,
+				367D2AA923A0821A009AF4A5 /* LXPhotosView.m */,
+				36DDBC7123A0D23700325B48 /* LXPhotoImageView.h */,
+				36DDBC7223A0D23700325B48 /* LXPhotoImageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +429,7 @@
 		36918BFC23978E58002A9994 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				36DDBC5923A0C3CA00325B48 /* MJPhotoBrowser */,
 				36EC139D239B9A6700BD25C9 /* Utils */,
 				36918BFE23978E58002A9994 /* Category */,
 				36918BFD23978E58002A9994 /* AppDelegate.h */,
@@ -512,6 +561,57 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		36DDBC5923A0C3CA00325B48 /* MJPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				36DDBC6523A0C3CA00325B48 /* MJPhoto.h */,
+				36DDBC5F23A0C3CA00325B48 /* MJPhoto.m */,
+				36DDBC5E23A0C3CA00325B48 /* MJPhotoBrowser.bundle */,
+				36DDBC6023A0C3CA00325B48 /* MJPhotoBrowser.h */,
+				36DDBC6823A0C3CA00325B48 /* MJPhotoBrowser.m */,
+				36DDBC6223A0C3CA00325B48 /* MJPhotoLoadingView.h */,
+				36DDBC5A23A0C3CA00325B48 /* MJPhotoLoadingView.m */,
+				36DDBC5D23A0C3CA00325B48 /* MJPhotoProgressView.h */,
+				36DDBC6623A0C3CA00325B48 /* MJPhotoProgressView.m */,
+				36DDBC5B23A0C3CA00325B48 /* MJPhotoToolbar.h */,
+				36DDBC6423A0C3CA00325B48 /* MJPhotoToolbar.m */,
+				36DDBC6323A0C3CA00325B48 /* MJPhotoView.h */,
+				36DDBC5C23A0C3CA00325B48 /* MJPhotoView.m */,
+				36DDBC6123A0C3CA00325B48 /* SDWebImageManager+MJ.h */,
+				36DDBC6723A0C3CA00325B48 /* SDWebImageManager+MJ.m */,
+			);
+			path = MJPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		36DDBC7423A0D93E00325B48 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				36DDBC7923A0E5A300325B48 /* View */,
+				36DDBC7523A0D95000325B48 /* Controller */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		36DDBC7523A0D95000325B48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36DDBC7623A0D97000325B48 /* LXComposeViewController.h */,
+				36DDBC7723A0D97000325B48 /* LXComposeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36DDBC7923A0E5A300325B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36DDBC7A23A0E5C700325B48 /* LXTextView.h */,
+				36DDBC7B23A0E5C700325B48 /* LXTextView.m */,
+				36DDBC7D23A0EBC900325B48 /* LXComposeToolBar.h */,
+				36DDBC7E23A0EBC900325B48 /* LXComposeToolBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		36EC137A239B444700BD25C9 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +735,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DDBC6B23A0C3CA00325B48 /* MJPhotoBrowser.bundle in Resources */,
 				366C1A99239E431F00B59001 /* silence.mp3 in Resources */,
 				361AA2F4235F05670065CC8B /* LaunchScreen.storyboard in Resources */,
 				361AA2F1235F05670065CC8B /* Assets.xcassets in Resources */,
@@ -699,8 +800,10 @@
 				3649B52F239BAA7F00A613B5 /* LXUser.m in Sources */,
 				36A92C30239E7DD9001017A3 /* LXStatusCell.m in Sources */,
 				368EEACD2397A45A00B4DB27 /* LXNavigationController.m in Sources */,
+				36DDBC7823A0D97000325B48 /* LXComposeViewController.m in Sources */,
 				365BD2102397F2CE00A9EE27 /* LXMineViewController.m in Sources */,
 				365BD21823993A0F00A9EE27 /* CustomTabBar.m in Sources */,
+				36DDBC5823A08D6000325B48 /* LXPhoto.m in Sources */,
 				36A92C36239E7F18001017A3 /* LXRetweetView.m in Sources */,
 				36A92C39239E7F2D001017A3 /* LXStatusToolBar.m in Sources */,
 				367D2AA7239F7616009AF4A5 /* NSDate+MJ.m in Sources */,
@@ -708,10 +811,14 @@
 				368EEAE02397BB1600B4DB27 /* LXOneViewController.m in Sources */,
 				368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */,
 				36EC1387239B7C1100BD25C9 /* MBProgressHUD+Ext.m in Sources */,
+				36DDBC7C23A0E5C700325B48 /* LXTextView.m in Sources */,
 				36918C1323978E58002A9994 /* UIImage+Image.m in Sources */,
 				368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */,
+				36DDBC6923A0C3CA00325B48 /* MJPhotoLoadingView.m in Sources */,
 				368EEAED23990EDD00B4DB27 /* LXNewFeatureCell.m in Sources */,
+				36DDBC6D23A0C3CA00325B48 /* MJPhotoToolbar.m in Sources */,
 				366C1A89239E27C500B59001 /* LXStatusTool.m in Sources */,
+				36DDBC6E23A0C3CA00325B48 /* MJPhotoProgressView.m in Sources */,
 				36918C1523978E58002A9994 /* AppDelegate.m in Sources */,
 				36918C1623978E58002A9994 /* LXTabBarController.m in Sources */,
 				36EC1382239B452D00BD25C9 /* LXOAuthViewController.m in Sources */,
@@ -725,13 +832,20 @@
 				366C1A85239DF28100B59001 /* NetworkUtil.m in Sources */,
 				365BD20D2397F0CF00A9EE27 /* LXMessageViewController.m in Sources */,
 				368EEAD32397A7DB00B4DB27 /* LXTitleButton.m in Sources */,
+				367D2AAA23A0821A009AF4A5 /* LXPhotosView.m in Sources */,
 				368EEAE923990BB600B4DB27 /* LXNewFeatureController.m in Sources */,
+				36DDBC6C23A0C3CA00325B48 /* MJPhoto.m in Sources */,
+				36DDBC7323A0D23700325B48 /* LXPhotoImageView.m in Sources */,
 				365BD21B23993C0A00A9EE27 /* CustomTabBarButton.m in Sources */,
+				36DDBC6F23A0C3CA00325B48 /* SDWebImageManager+MJ.m in Sources */,
 				365BD21E23993E7700A9EE27 /* CustomBadge.m in Sources */,
 				368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */,
+				36DDBC6A23A0C3CA00325B48 /* MJPhotoView.m in Sources */,
 				366C1A95239E345B00B59001 /* LXAccountParam.m in Sources */,
 				366C1A92239E2CBE00B59001 /* LXStatusResult.m in Sources */,
+				36DDBC7F23A0EBC900325B48 /* LXComposeToolBar.m in Sources */,
 				365BD215239939B100A9EE27 /* CustomTabBarController.m in Sources */,
+				36DDBC7023A0C3CA00325B48 /* MJPhotoBrowser.m in Sources */,
 				366C1AA0239E4A7600B59001 /* LXUserParam.m in Sources */,
 				368EEAD02397A74800B4DB27 /* LXHomeViewController.m in Sources */,
 				36EC138B239B85D000BD25C9 /* LXAccount.m in Sources */,

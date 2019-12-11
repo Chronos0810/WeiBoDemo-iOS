@@ -25,6 +25,7 @@
         NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
         attrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
         [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
+        
     }
 }
 

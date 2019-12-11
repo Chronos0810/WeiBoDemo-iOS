@@ -71,15 +71,38 @@
     CGFloat textY = CGRectGetMaxY(_originalIconFrame) + StatusCellMargin;
     CGFloat textW = ScreenW - 2 *StatusCellMargin;
     attrs[NSFontAttributeName] = CellTextFont;
-    CGRect textSize = [_status.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil];
+    CGRect textSize = [_status.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:attrs context:nil];
     _originalTextFrame = (CGRect){{textX,textY},textSize.size};
+    
+    
+    CGFloat originalH = CGRectGetMaxY(_originalTextFrame) + StatusCellMargin;
+    if (_status.pic_urls.count) {
+        CGFloat photosX = StatusCellMargin;
+        CGFloat photosY = CGRectGetMaxY(_originalTextFrame) + StatusCellMargin;
+        CGSize photosSize = [self photosSizeWithCount:(int)_status.pic_urls.count];
+        
+        _originalPhotosFrame = (CGRect){{photosX, photosY}, photosSize};
+        
+        originalH = CGRectGetMaxY(_originalPhotosFrame) + StatusCellMargin;
+    }
     
     CGFloat originalX = 0;
     CGFloat originalY = StatusCellMargin;
     CGFloat originalW = ScreenW;
-    CGFloat originalH = CGRectGetMaxY(_originalTextFrame) + StatusCellMargin;
+    
     _originalViewFrame = CGRectMake(originalX, originalY, originalW, originalH);
     
+}
+
+- (CGSize)photosSizeWithCount:(int)count{
+    
+    int column = count == 4 ? 2 : 3;
+    int rows = (count-1) / column + 1;
+    CGFloat photoWH = 80;
+    CGFloat w = column * photoWH + (column - 1)*StatusCellMargin;
+    CGFloat h = rows * photoWH + (rows - 1)*StatusCellMargin;
+    
+    return CGSizeMake(w, h);
 }
 
 - (void)initRetweetViewFrame{
@@ -99,11 +122,23 @@
     CGRect textSize = [_status.retweeted_status.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil];
     _reTweetTextFrame = (CGRect){{textX,textY},textSize.size};
     
-    CGFloat originalX = 0;
-    CGFloat originalY = CGRectGetMaxY(_reTweetTextFrame);
-    CGFloat originalW = ScreenW;
-    CGFloat originalH = CGRectGetMaxY(_reTweetTextFrame) + StatusCellMargin;
-    _reTweetViewFrame = CGRectMake(originalX, originalY, originalW, originalH);
+    CGFloat retweetH = CGRectGetMaxY(_reTweetTextFrame) + StatusCellMargin;
+    
+    int photoCount = (int)_status.retweeted_status.pic_urls.count;
+    if (photoCount) {
+        CGFloat photosX = StatusCellMargin;
+        CGFloat photosY = CGRectGetMaxY(_reTweetTextFrame) + StatusCellMargin;
+        CGSize photosSize = [self photosSizeWithCount:photoCount];
+        
+        _reTweetPhotosFrame = (CGRect){{photosX, photosY}, photosSize};
+        
+        retweetH = CGRectGetMaxY(_reTweetPhotosFrame) + StatusCellMargin;
+    }
+    
+    CGFloat retweetX = 0;
+    CGFloat retweetY = CGRectGetMaxY(_originalViewFrame);
+    CGFloat retweetW = ScreenW;
+    _reTweetViewFrame = CGRectMake(retweetX, retweetY, retweetW, retweetH);
 }
 
 @end

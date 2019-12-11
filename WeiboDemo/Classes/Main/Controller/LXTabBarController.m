@@ -14,6 +14,7 @@
 #import "LXHomeViewController.h"
 #import "LXMessageViewController.h"
 #import "LXMineViewController.h"
+#import "LXComposeViewController.h"
 
 //#import <objc/message.h>
 
@@ -85,7 +86,12 @@
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
-    if (item.tag == 0 && self.selectedIndex == 0) {
+    if (item.tag == 2) {
+        LXComposeViewController *composeVC = [[LXComposeViewController alloc] init];
+        LXNavigationController *nav = [[LXNavigationController alloc] initWithRootViewController:composeVC];
+        [self presentViewController:nav animated:YES completion:nil];
+        
+    } else if (item.tag == 0 && self.selectedIndex == 0) {
         [_mHomeVC refresh];
     }
 }

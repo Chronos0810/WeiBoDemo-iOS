@@ -14,6 +14,7 @@
 #import "LXStatusResult.h"
 #import "LXStatus.h"
 #import "MJExtension.h"
+#import "LXPhoto.h"
 
 @implementation LXStatusTool
 
@@ -30,6 +31,11 @@
         [LXStatusResult mj_setupObjectClassInArray:^NSDictionary *{
             return @{@"statuses":[LXStatus class]};
         }];
+        
+        [LXStatus mj_setupObjectClassInArray:^NSDictionary *{
+            return @{@"pic_urls":[LXPhoto class]};
+        }];
+        
         LXStatusResult *result = [LXStatusResult mj_objectWithKeyValues:responseObject];
         if (success) {
             success(result.statuses);
@@ -54,6 +60,11 @@
         [LXStatusResult mj_setupObjectClassInArray:^NSDictionary *{
             return @{@"statuses":[LXStatus class]};
         }];
+        
+        [LXStatus mj_setupObjectClassInArray:^NSDictionary *{
+            return @{@"pic_urls":[LXPhoto class]};
+        }];
+        
         LXStatusResult *result = [LXStatusResult mj_objectWithKeyValues:responseObject];
         if (success) {
             success(result.statuses);
