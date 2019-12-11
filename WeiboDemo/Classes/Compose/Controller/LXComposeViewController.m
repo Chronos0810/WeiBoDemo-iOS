@@ -10,7 +10,7 @@
 #import "LXTextView.h"
 #import "LXComposeToolBar.h"
 
-@interface LXComposeViewController ()<UITextViewDelegate>
+@interface LXComposeViewController ()<UITextViewDelegate, LXComposeToolBarDelegate>
 
 @property (nonatomic, weak) LXTextView *textView;
 @property (nonatomic, weak) LXComposeToolBar *toolBar;
@@ -48,10 +48,20 @@
     
     LXComposeToolBar *toolBar = [[LXComposeToolBar alloc] init];
     [self.view addSubview:toolBar];
+    toolBar.delegate = self;
+    
     _toolBar = toolBar;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void)composeToolBar:(LXComposeToolBar *)toolBar didClickButton:(NSUInteger)index{
+    if (index == 0) {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
 }
 
 - (void)textDidChange{

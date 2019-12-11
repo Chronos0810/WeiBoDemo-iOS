@@ -10,7 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LXComposeToolBar;
+@protocol LXComposeToolBarDelegate <NSObject>
+
+@optional
+- (void)composeToolBar:(LXComposeToolBar *)toolBar didClickButton:(NSUInteger)index;
+
+@end
+
+
 @interface LXComposeToolBar : UIView
+
+@property (nonatomic, weak) id<LXComposeToolBarDelegate> delegate;
 
 @end
 
