@@ -29,6 +29,7 @@
 		367D2AA4239F33AC009AF4A5 /* LXStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA3239F33AC009AF4A5 /* LXStatusFrame.m */; };
 		367D2AA7239F7616009AF4A5 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA5239F7616009AF4A5 /* NSDate+MJ.m */; };
 		367D2AAA23A0821A009AF4A5 /* LXPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2AA923A0821A009AF4A5 /* LXPhotosView.m */; };
+		3686911123A1D35B00FAA901 /* LXComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686911023A1D35B00FAA901 /* LXComposePhotosView.m */; };
 		368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC023979B2700B4DB27 /* LXSearchBar.m */; };
 		368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC62397A0AA00B4DB27 /* UIView+Frame.m */; };
 		368EEACA2397A22E00B4DB27 /* LXDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368EEAC92397A22E00B4DB27 /* LXDiscoverViewController.m */; };
@@ -117,6 +118,8 @@
 		367D2AA6239F7616009AF4A5 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
 		367D2AA823A0821A009AF4A5 /* LXPhotosView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPhotosView.h; sourceTree = "<group>"; };
 		367D2AA923A0821A009AF4A5 /* LXPhotosView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPhotosView.m; sourceTree = "<group>"; };
+		3686910F23A1D35B00FAA901 /* LXComposePhotosView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXComposePhotosView.h; sourceTree = "<group>"; };
+		3686911023A1D35B00FAA901 /* LXComposePhotosView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXComposePhotosView.m; sourceTree = "<group>"; };
 		368EEABF23979B2700B4DB27 /* LXSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSearchBar.h; sourceTree = "<group>"; };
 		368EEAC023979B2700B4DB27 /* LXSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSearchBar.m; sourceTree = "<group>"; };
 		368EEAC52397A0AA00B4DB27 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -608,6 +611,8 @@
 				36DDBC7B23A0E5C700325B48 /* LXTextView.m */,
 				36DDBC7D23A0EBC900325B48 /* LXComposeToolBar.h */,
 				36DDBC7E23A0EBC900325B48 /* LXComposeToolBar.m */,
+				3686910F23A1D35B00FAA901 /* LXComposePhotosView.h */,
+				3686911023A1D35B00FAA901 /* LXComposePhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -812,6 +817,7 @@
 				368EEAC123979B2700B4DB27 /* LXSearchBar.m in Sources */,
 				36EC1387239B7C1100BD25C9 /* MBProgressHUD+Ext.m in Sources */,
 				36DDBC7C23A0E5C700325B48 /* LXTextView.m in Sources */,
+				3686911123A1D35B00FAA901 /* LXComposePhotosView.m in Sources */,
 				36918C1323978E58002A9994 /* UIImage+Image.m in Sources */,
 				368EEAC72397A0AA00B4DB27 /* UIView+Frame.m in Sources */,
 				36DDBC6923A0C3CA00325B48 /* MJPhotoLoadingView.m in Sources */,

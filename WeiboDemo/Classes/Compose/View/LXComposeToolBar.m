@@ -38,13 +38,16 @@
     [button setImage:image forState:UIControlStateNormal];
     [button setImage:highlightImage forState:UIControlStateHighlighted];
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    button.tag = self.subviews.count;
     
     [self addSubview:button];
     
 }
 
 - (void)buttonDidClick:(UIButton *)button{
-    
+    if ([self.delegate respondsToSelector:@selector(composeToolBar:didClickButton:)]) {
+        [self.delegate composeToolBar:self didClickButton:button.tag];
+    }
 }
 
 - (void)layoutSubviews{
