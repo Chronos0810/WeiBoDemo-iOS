@@ -189,7 +189,7 @@
 		36DDBC7E23A0EBC900325B48 /* LXComposeToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXComposeToolBar.m; sourceTree = "<group>"; };
 		36EC1380239B452D00BD25C9 /* LXOAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXOAuthViewController.h; sourceTree = "<group>"; };
 		36EC1381239B452D00BD25C9 /* LXOAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXOAuthViewController.m; sourceTree = "<group>"; };
-		36EC1383239B4ECE00BD25C9 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		36EC1383239B4ECE00BD25C9 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		36EC1385239B7C1100BD25C9 /* MBProgressHUD+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Ext.h"; sourceTree = "<group>"; };
 		36EC1386239B7C1100BD25C9 /* MBProgressHUD+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Ext.m"; sourceTree = "<group>"; };
 		36EC1389239B85D000BD25C9 /* LXAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAccount.h; sourceTree = "<group>"; };
